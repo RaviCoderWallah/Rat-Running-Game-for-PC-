@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    font-weight: 400;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.game-main-container{
+    width: 100%;
+    height: 100%;
+    background-image: url(img/background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.game-main-container::before{
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.6;
+    position: absolute;
+}
+
+
+.mouse-player{
+    width: 14rem;
+    height: 10rem;
+    background-image: url(img/rat-image.png) ;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 35rem;
+}
+
+.animateMouse{
+    animation: animate 0.9s linear ;
+}
+
+@keyframes animate {
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 34rem;
+    }
+    100%{
+         bottom: 0;
+    }
+}
+
+.angry-cat{
+    width: 20rem;
+    height: 16rem;
+    background-image: url(img/cat-image.webp) ;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 70%;
+}
+
+
+.angry-cat-animation{
+    animation: catAnimation 3s linear infinite;
+}
+
+@keyframes catAnimation {
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
+
+.gameOver{
+    display: none;
+}
+
+.gameOver.active{
+    display: block;
+
+}
+.gameOver.active h1{
+    font-size: 5rem;
+    text-align: center;
+}
