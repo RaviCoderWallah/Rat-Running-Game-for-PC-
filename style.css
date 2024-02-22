@@ -72,6 +72,20 @@ body{
     left: 70%;
 }
 
+.gameover-image{
+    width: 13rem;
+    height: 16rem;
+    background-image: url(img/kill-rat.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 33%;
+}
+
+.angry-cat.hide, .mouse-player.hide{
+display: none;
+}
+
 
 .angry-cat-animation{
     animation: catAnimation 3s linear infinite;
@@ -98,3 +112,4 @@ body{
     font-size: 5rem;
     text-align: center;
 }
+
